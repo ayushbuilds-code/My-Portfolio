@@ -6,9 +6,6 @@
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-my--portfolio--xnsh.onrender.com-d91424?style=for-the-badge)](https://my-portfolio-xnsh.onrender.com)
 [![GitHub](https://img.shields.io/badge/GitHub-ayushbuilds--code-181717?style=for-the-badge&logo=github)](https://github.com/ayushbuilds-code)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-+91_8554938023-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/918554938023)
-[![Gmail](https://img.shields.io/badge/Gmail-workayush.business@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:workayush.business@gmail.com)
-
 </div>
 
 ---
@@ -100,8 +97,8 @@ python3 -m http.server 5500
 
 | Channel | Link |
 |---------|------|
-| 💬 WhatsApp | [+91 8554938023](https://wa.me/918554938023) |
-| 📧 Gmail | [workayush.business@gmail.com](mailto:workayush.business@gmail.com) |
+| 💬 WhatsApp | - |
+| 📧 Gmail | - |
 | 📍 Location | Bangalore, India |
 
 ---
