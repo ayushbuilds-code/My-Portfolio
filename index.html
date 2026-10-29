@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ayush Dungarwal | Creative Web Designer & Digital Professional</title>
+  <meta name="description" content="Portfolio of Ayush Dungarwal - Creative Web Designer & UI/UX Specialist crafting high-end digital experiences.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="preloader-content">
+      <div class="preloader-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-text">INITIALIZING SEQUENCE</span>
+      </div>
+      <div class="progress-track">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div class="progress-meta">
+        <span id="progress-percent" class="progress-percent">0%</span>
+        <span id="frame-counter" class="frame-counter">0 / 144</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Fixed Canvas Viewport (Smooth 60fps Scroll Animation) -->
+  <div class="canvas-viewport" aria-hidden="true">
+    <canvas id="animation-canvas" class="animation-canvas"></canvas>
+    <div class="canvas-overlay"></div>
+  </div>
+
+  <!-- Subtle Progress Scrub Line at the top -->
+  <div id="scrub-indicator" class="scrub-indicator">
+    <div id="scrub-fill" class="scrub-fill"></div>
+  </div>
+
+  <!-- Main Portfolio Content Layer -->
+  <div class="portfolio-container">
+    
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="nav-left">
+        <button class="nav-back-btn" aria-label="Back / Home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="brand-pill">
+          <span class="pill-bar"></span>
+          <span class="pill-text">CREATIVE PORTFOLIO</span>
+        </div>
+      </div>
+      
+      <div class="nav-right">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span class="status-text">AVAILABLE FOR PROJECTS</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <!-- Huge Typographic Backdrop -->
+      <div class="hero-backdrop-title" aria-hidden="true">PORTFOLIO</div>
+
+      <div class="hero-grid">
+        <!-- Hero Intro (Left) -->
+        <div class="hero-intro">
+          <div class="script-greeting">Hello, I'm</div>
+          <h1 class="hero-name">
+            AYUSH<br>
+            DUNGARWAL
+          </h1>
+          <div class="hero-role">WEB DESIGNER<br>AI AGENT &amp; AUTOMATION DEVELOPER</div>
+          <p class="hero-description">
+            A creative developer who loves turning ideas into modern digital experiences. I specialize in web design and development, creating immersive, responsive, and visually engaging websites that are built around great user experiences.
+            <br><br>
+            Alongside web design, I build AI-powered automation systems and voice agents that help businesses streamline their workflows, manage leads, and reduce repetitive work. I enjoy combining design, technology, and AI to create products that not only look great but also solve real-world problems.
+          </p>
+          <div class="location-tag">
+            <span class="location-icon">📍</span>
+            <span>BASED IN: BANGALORE, INDIA</span>
+          </div>
+        </div>
+
+        <!-- Center Space Reserved For Foreground Interaction with Frame Sequence -->
+        <div class="hero-center-space"></div>
+
+        <!-- Hero Stats Cards (Right) -->
+        <div class="hero-stats">
+          <div class="stat-pill">
+            <div class="stat-icon star-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="stat-text">
+              <span class="stat-label">EXPERIENCE</span>
+              <span class="stat-value">1+ YEARS</span>
+            </div>
+          </div>
+
+          <div class="stat-pill">
+            <div class="stat-icon target-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <div class="stat-text">
+              <span class="stat-label">SPECIALIZED IN</span>
+              <span class="stat-value">WEB DESIGN<br>AI AGENT & AUTOMATION DEVELOPER</span>
+            </div>
+          </div>
+
+          <div class="stat-pill">
+            <div class="stat-icon case-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div class="stat-text">
+              <span class="stat-label">AVAILABLE FOR</span>
+              <span class="stat-value">FREELANCE<br>COLLABORATION</span>
+            </div>
+          </div>
+
+          <div class="stat-pill">
+            <div class="stat-icon globe-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <div class="stat-text">
+              <span class="stat-label">WORKING</span>
+              <span class="stat-value">WORLDWIDE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Floating Scroll Indicator -->
+      <div id="scroll-indicator" class="scroll-indicator">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span class="scroll-label">SCROLL TO EXPLORE</span>
+      </div>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="section-header">
+        <h2 class="section-title">SELECTED PROJECTS</h2>
+        <a href="#projects" class="section-link">
+          <span>VIEW ALL PROJECTS</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 01: AI Real Estate Calling Agent -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-meta-wrap">
+              <span class="project-num">01 —</span>
+              <span class="project-tagline">Voice Agent</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://drive.google.com/file/d/1sK7wf0gDAyQl9V5X8JxS7apD1xoDvE20/view" target="_blank" rel="noopener noreferrer" class="project-action-btn live-btn" title="Watch Video Demo">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Demo Video</span>
+              </a>
+            </div>
+          </div>
+          <a href="https://drive.google.com/file/d/1sK7wf0gDAyQl9V5X8JxS7apD1xoDvE20/view" target="_blank" rel="noopener noreferrer" class="project-img-wrapper">
+            <img src="assets/ai-calling-agent.jpg" alt="AI Real Estate Calling Agent Demo" loading="lazy" class="project-img">
+          </a>
+          <div class="project-footer">
+            <a href="https://drive.google.com/file/d/1sK7wf0gDAyQl9V5X8JxS7apD1xoDvE20/view" target="_blank" rel="noopener noreferrer" class="project-name-link">
+              <h3 class="project-name">AI REAL ESTATE CALLING AGENT</h3>
+            </a>
+            <span class="project-category">VOICE AGENT &amp; AUTOMATION</span>
+          </div>
+        </article>
+
+        <!-- Project 02: Freelancer Portfolio & Services Website -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-meta-wrap">
+              <span class="project-num">02 —</span>
+              <span class="project-tagline">Freelance Website</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/ayushbuilds-code/ayush-jain-ai-freelancer" target="_blank" rel="noopener noreferrer" class="project-action-btn github-btn" title="View Source on GitHub">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://ayush-jain-ai-freelancer.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-btn live-btn" title="View Live Website">
+                <span class="live-pulse-dot"></span>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+          <a href="https://ayush-jain-ai-freelancer.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-img-wrapper">
+            <img src="assets/freelancer-services.jpg" alt="Freelancer Portfolio &amp; Services Website Demo" loading="lazy" class="project-img">
+          </a>
+          <div class="project-footer">
+            <a href="https://ayush-jain-ai-freelancer.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-name-link">
+              <h3 class="project-name">FREELANCER PORTFOLIO &amp; SERVICES WEBSITE</h3>
+            </a>
+            <span class="project-category">WEB DESIGN &amp; DEVELOPMENT</span>
+          </div>
+        </article>
+
+        <!-- Project 03: Free Fire Tournament Management System -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-meta-wrap">
+              <span class="project-num">03 —</span>
+              <span class="project-tagline">Gaming Event</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/ayushbuilds-code/Ignite-Sports-Club-Checkin" target="_blank" rel="noopener noreferrer" class="project-action-btn github-btn" title="View Source on GitHub">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://checkin-new-pi.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-btn live-btn" title="View Live Website">
+                <span class="live-pulse-dot"></span>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+          <a href="https://checkin-new-pi.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-img-wrapper">
+            <img src="assets/tournament-management.jpg" alt="Free Fire Tournament Management System Demo" loading="lazy" class="project-img">
+          </a>
+          <div class="project-footer">
+            <a href="https://checkin-new-pi.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-name-link">
+              <h3 class="project-name">FREE FIRE TOURNAMENT MANAGEMENT SYSTEM</h3>
+            </a>
+            <span class="project-category">ESPORTS &amp; EVENT MANAGEMENT SYSTEM</span>
+          </div>
+        </article>
+
+        <!-- Project 04: Magical Invisible Window — Gesture Control -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-meta-wrap">
+              <span class="project-num">04 —</span>
+              <span class="project-tagline">Gesture Control</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/ayushbuilds-code/Magic-Invisible-Window" target="_blank" rel="noopener noreferrer" class="project-action-btn github-btn" title="View Source on GitHub">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://gesture-project-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-btn live-btn" title="View Live Website">
+                <span class="live-pulse-dot"></span>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+          <a href="https://gesture-project-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-img-wrapper">
+            <img src="assets/invisible-window.jpg" alt="Magical Invisible Window Gesture Control Demo" loading="lazy" class="project-img">
+          </a>
+          <div class="project-footer">
+            <a href="https://gesture-project-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-name-link">
+              <h3 class="project-name">MAGICAL INVISIBLE WINDOW — GESTURE CONTROL</h3>
+            </a>
+            <span class="project-category">AI &amp; COMPUTER VISION INTERFACE</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience, Process & Testimonial Section -->
+    <section class="details-section">
+      <div class="details-grid">
+        <!-- Column 1: Education & Skills -->
+        <div class="details-col education-skills-col">
+          <h2 class="col-title">EDUCATION &amp; SKILLS</h2>
+          
+          <div class="sub-block">
+            <h3 class="sub-title">EDUCATION</h3>
+            <ul class="education-list">
+              <li>
+                <span class="bullet">•</span>
+                <div>
+                  <strong>B.E. CSE in (AI&amp;ML)</strong>
+                  <p class="edu-sub">MIRAI SCHOOL OF TECHNOLOGY, BENGALURU</p>
+                </div>
+              </li>
+              <li>
+                <span class="bullet">•</span>
+                <div>
+                  <strong>AI WEB DEVELOPER</strong>
+                  <p class="edu-sub">AI AGENT &amp; AUTOMATION DEVELOPER</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sub-block">
+            <h3 class="sub-title">SKILLS</h3>
+            <div class="skills-wrap">
+              <span class="skill-pill">WEB DESIGN</span>
+              <span class="skill-pill">UI/UX DESIGN</span>
+              <span class="skill-pill">AI AGENT</span>
+              <span class="skill-pill">AI AUTOMATION</span>
+              <span class="skill-pill">VOICE AGENT</span>
+              <span class="skill-pill">LLM INTEGRATION</span>
+              <span class="skill-pill">PROMPT ENGINEERING</span>
+              <span class="skill-pill">MAKE.COM</span>
+              <span class="skill-pill">API INTEGRATION</span>
+              <span class="skill-pill">WEBHOOK</span>
+              <span class="skill-pill">CRM AUTOMATION</span>
+              <span class="skill-pill">WORKFLOW AUTOMATION</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Work Process -->
+        <div class="details-col process-col">
+          <h2 class="col-title">WORK PROCESS</h2>
+          <div class="process-timeline">
+            <!-- Step 1 -->
+            <div class="process-step">
+              <div class="step-num-bubble">01</div>
+              <div class="step-info">
+                <h3 class="step-title">DISCOVER</h3>
+                <p class="step-desc">Understand client goals and requirements</p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="process-step">
+              <div class="step-num-bubble">02</div>
+              <div class="step-info">
+                <h3 class="step-title">RESEARCH</h3>
+                <p class="step-desc">Analyze market, competitors and target audience</p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="process-step">
+              <div class="step-num-bubble">03</div>
+              <div class="step-info">
+                <h3 class="step-title">STRATEGY</h3>
+                <p class="step-desc">Plan the best approach and creative direction</p>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="process-step">
+              <div class="step-num-bubble">04</div>
+              <div class="step-info">
+                <h3 class="step-title">DESIGN</h3>
+                <p class="step-desc">Create modern, user-focused visual solutions</p>
+              </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="process-step">
+              <div class="step-num-bubble">05</div>
+              <div class="step-info">
+                <h3 class="step-title">DELIVER</h3>
+                <p class="step-desc">Test, optimize and deliver the final product</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Crimson Featured Philosophy Card -->
+        <div class="details-col quote-col">
+          <div class="quote-card">
+            <div class="quote-card-glow"></div>
+            
+            <div class="quote-top">
+              <div class="quote-mark">“</div>
+              <div class="quote-badge">
+                <span class="quote-badge-dot"></span>
+                <span>CORE ETHOS</span>
+              </div>
+            </div>
+
+            <div class="quote-content">
+              <p class="quote-statement">
+                Great design commands attention, but autonomous systems drive scale. I build high-impact web experiences powered by intelligent AI workflows.
+              </p>
+
+              <div class="quote-pillars">
+                <div class="pillar-card">
+                  <span class="pillar-icon">⚡</span>
+                  <div class="pillar-meta">
+                    <span class="pillar-label">Autonomous AI</span>
+                    <span class="pillar-sub">Voice bots &amp; 24/7 lead pipelines</span>
+                  </div>
+                </div>
+
+                <div class="pillar-card">
+                  <span class="pillar-icon">✦</span>
+                  <div class="pillar-meta">
+                    <span class="pillar-label">Modern UI / UX</span>
+                    <span class="pillar-sub">Interactive, conversion-driven craft</span>
+                  </div>
+                </div>
+
+                <div class="pillar-card">
+                  <span class="pillar-icon">↗</span>
+                  <div class="pillar-meta">
+                    <span class="pillar-label">Frictionless Scale</span>
+                    <span class="pillar-sub">100+ manual hours eliminated</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quote-tagline">
+                <span class="tagline-phrase">Build smarter.</span>
+                <span class="tagline-phrase">Automate faster.</span>
+                <span class="tagline-phrase">Scale further.</span>
+              </div>
+            </div>
+
+            <div class="quote-footer">
+              <div class="quote-author">
+                <span class="author-signature">Ayush Dungarwal</span>
+                <span class="author-role">CREATIVE WEB &amp; AI DEVELOPER</span>
+              </div>
+              <a href="#contact" class="quote-cta-btn" aria-label="Connect with Ayush">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer & Contact Section ("LET'S WORK TOGETHER") -->
+    <footer class="contact-section">
+      <div class="contact-grid">
+        <!-- Contact Details (Left) -->
+        <div class="contact-info-col">
+          <div class="contact-header">
+            <h2 class="contact-heading">LET'S WORK<br>TOGETHER</h2>
+            <span class="heading-dot"></span>
+          </div>
+          <p class="contact-lead">
+            I'm always open to new projects and exciting collaborations.
+          </p>
+
+          <div class="contact-links">
+            <a href="https://wa.me/918554938023" target="_blank" rel="noopener noreferrer" class="contact-row contact-row-wa">
+              <span class="contact-icon wa-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M11.99 1.99C6.477 1.99 2 6.467 2 11.98c0 1.76.459 3.41 1.26 4.845L2 22.01l5.334-1.395A9.934 9.934 0 0011.99 22c5.513 0 9.99-4.477 9.99-9.99S17.503 1.99 11.99 1.99z"/>
+                </svg>
+              </span>
+              <span class="contact-val">+91 8554938023</span>
+              <span class="contact-badge wa-badge">WhatsApp</span>
+            </a>
+            <a href="mailto:workayush.business@gmail.com" class="contact-row contact-row-mail">
+              <span class="contact-icon mail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </span>
+              <span class="contact-val">workayush.business@gmail.com</span>
+              <span class="contact-badge mail-badge">Gmail</span>
+            </a>
+            <div class="contact-row">
+              <span class="contact-icon">📍</span>
+              <span class="contact-val">Bangalore, India</span>
+            </div>
+          </div>
+
+          <div class="contact-cta-group">
+            <a href="https://wa.me/918554938023" target="_blank" rel="noopener noreferrer" class="cta-button cta-whatsapp">
+              <div class="cta-wa-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M11.99 1.99C6.477 1.99 2 6.467 2 11.98c0 1.76.459 3.41 1.26 4.845L2 22.01l5.334-1.395A9.934 9.934 0 0011.99 22c5.513 0 9.99-4.477 9.99-9.99S17.503 1.99 11.99 1.99z"/>
+                </svg>
+              </div>
+              <div class="cta-text-wrap">
+                <span class="cta-label">LET'S CONNECT ON WHATSAPP</span>
+                <span class="cta-sub">Chat directly • Fast response</span>
+              </div>
+            </a>
+
+            <a href="mailto:workayush.business@gmail.com" class="cta-button cta-gmail">
+              <div class="cta-gmail-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <div class="cta-text-wrap">
+                <span class="cta-label">SEND ME AN EMAIL</span>
+                <span class="cta-sub">workayush.business@gmail.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Workspace Visual Showcase (Right) -->
+        <div class="contact-visual-col">
+          <div class="workspace-card">
+            <img src="assets/workspace.jpg" alt="Creative Studio Workspace Setup" class="workspace-img" loading="lazy">
+            <div class="workspace-badge">
+              <span class="badge-title">CREATIVE DESIGNER</span>
+              <span class="badge-sub">DIGITAL PROFESSIONAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="frames.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
