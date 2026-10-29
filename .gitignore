@@ -1,0 +1,4 @@
+# Original PNG frames (too large for GitHub — use frames_webp/ instead)
+frames/
+*.zip
+.DS_Store
